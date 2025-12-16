@@ -8,12 +8,6 @@
 
 Built natively using **Swift** and **SpriteKit**, this project demonstrates game physics, particle effects, and logic-based educational mechanics.
 
-<p align="center">
-  <img src="path/to/your/screenshot.png" alt="Gameplay Screenshot" width="300"/>
-</p>
-
-*(Note: Replace `path/to/your/screenshot.png` with your actual image path)*
-
 ## 🎮 How to Play
 
 1.  **Observe the Emoji:** A large Emoji will appear in the sky (e.g., 🍎 or 🦁).
