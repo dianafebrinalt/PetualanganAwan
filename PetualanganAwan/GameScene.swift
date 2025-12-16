@@ -12,7 +12,7 @@ class GameScene: SKScene {
     var currentTargetWord = ""
     var currentLetterProgress = 0
     var targetEmojiLabel: SKLabelNode?
-    var answerSlotsLabel: SKLabelNode!
+    var answerSlotsLabel: SKLabelNode?
     
     override func didMove(to view: SKView) {
         setupUI()
@@ -57,7 +57,7 @@ class GameScene: SKScene {
                 displayText += "_ "
             }
         }
-        answerSlotsLabel.text = displayText
+        answerSlotsLabel?.text = displayText
     }
     
     func startBalloonSpawner() {
@@ -170,7 +170,7 @@ class GameScene: SKScene {
     }
     
     func showNewQuestionContent() {
-        answerSlotsLabel.fontColor = .white
+        answerSlotsLabel?.fontColor = .white
         
         let scaleUp = SKAction.scale(to: 1.5, duration: 0.2)
         let scaleBack = SKAction.scale(to: 1.0, duration: 0.2)
@@ -178,7 +178,7 @@ class GameScene: SKScene {
         
         let wait = SKAction.wait(forDuration: 2.0)
         let nextQuestionContent = SKAction.run { [weak self] in
-            self?.answerSlotsLabel.fontColor = .white
+            self?.answerSlotsLabel?.fontColor = .white
             self?.startGame()
         }
         run(SKAction.sequence([wait, nextQuestionContent]))
